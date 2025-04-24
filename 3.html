@@ -1,0 +1,26 @@
+<form action="">
+    <h3>User Registration</h3>
+    Username: <input type="text" name="username" required><br>
+    Email: <input type="email" name="email" required><br>
+    Password: <input type="password" name="password" minlength="8" required><br>
+
+    Gender:
+    <label><input type="radio" name="gender" value="male"> Male</label>
+    <label><input type="radio" name="gender" value="female"> Female</label><br>
+
+    Bio:<br>
+    <textarea name="bio" rows="5" cols="40" placeholder="Tell us about yourself"></textarea><br>
+
+    Favorite Color:
+    <select name="color">
+        <option disabled selected>Choose your color</option>
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
+        <option value="four">Four</option>
+    </select><br>
+
+    <label><input type="checkbox" name="terms"> I agree to the terms and conditions</label><br>
+
+    <input type="submit" value="Register">
+</form>
