@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>order precedence of styles</title>
+
+        <style>
+            p {
+                color: red;
+            }
+
+            #para {
+                color: orange;
+            }
+
+            .para1 {
+                color: blue;
+            }
+
+            div {
+                color: green;
+            }
+
+            h1 {
+                font-size: 10px;
+            }
+
+            .div1 {
+                padding: 0px;
+                border: solid 4px red;
+                display: flex;
+            }
+
+            .div2 {
+                background-color: yellow;
+                height: 50rem;
+                width: 50rem;
+            }
+
+            .div3 {
+                background-color: greenyellow;
+                height: 50rem;
+                width: 80rem;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p id="para" class="para1"> This is first paragraph </p>
+
+        <div>
+            <p> This is second paragraph </p>
+        </div>
+
+        <h1> Heading </h1>
+
+        <div class="div1">
+
+            <div class="div2"></div>
+
+            <div class="div3"></div>
+
+        </div>
+    </body>
+</html>
