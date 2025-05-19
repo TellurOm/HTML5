@@ -1,0 +1,168 @@
+:root {
+  --bg: #fff;
+  --text: #000;
+  --input-bg: #f1f3f4;
+  --footer-bg: #f2f2f2;
+}
+
+body.dark {
+  --bg: #202124;
+  --text: #e8eaed;
+  --input-bg: #303134;
+  --footer-bg: #171717;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 14px;
+  align-items: center;
+}
+
+.left-links a,
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.right-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.signin {
+  padding: 6px 12px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+#darkToggle {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+#clock {
+  font-weight: bold;
+}
+
+.container {
+  flex: 1;
+  padding-top: 5%;
+  text-align: center;
+}
+
+.logo {
+  font-size: 80px;
+  font-family: 'Product Sans', sans-serif;
+  color: #4285f4;
+}
+
+.search-area {
+  position: relative;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+}
+
+.search-area input {
+  width: 100%;
+  padding: 12px 40px 12px 20px;
+  border: 1px solid #000000;
+  border-radius: 24px;
+  background-color: var(--input-bg);
+  font-size: 16px;
+}
+
+.search-area button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search-area .material-icons {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.extras {
+  margin-top: 30px;
+}
+
+.extras section {
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: left;
+  background: var(--input-bg);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#todoList li {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+footer {
+  background: var(--footer-bg);
+  padding: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.chatbot {
+  margin-top: 30px;
+}
+
+#chatInput {
+  padding: 10px;
+  width: 70%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#chatbotContainer {
+  margin-top: 20px;
+}
+
+#chatOutput {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #000000;
+  background-color: #000000;
+  border-radius: 5px;
+}

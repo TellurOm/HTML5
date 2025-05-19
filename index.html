@@ -1,30 +1,89 @@
-<!doctype html>
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Google Clone Enhanced</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="left-links">
+      <a href="#">Gmail</a>
+      <a href="#">Images</a>
+    </div>
+    <div class="right-actions">
+      <span id="clock"></span>
+      <button id="darkToggle">🌙</button>
+      <button class="signin">Sign In</button>
+    </div>
+  </header>
 
-    </head>
-    <body>
-        <strong> This is bold </strong>
+  <main class="container">
+    <h1 class="logo">Google</h1>
 
-        <p>This is a paragraph</p>
+    <div class="search-area">
+      <input id="searchInput" type="text" placeholder="Search Google or type a URL" />
+      <button onclick="saveSearch()">
+        <span class="material-icons">search</span>
+      </button>
+    </div>
 
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-        
-        <i>This is Italic text</i>
+    <div class="buttons">
+      <button onclick="saveSearch()">Google Search</button>
+      <button>I'm Feeling Lucky</button>
+    </div>
 
-        <hr>
+    <div class="extras">
+      <section class="quote">
+        <h3>🌟 Quote of the Day</h3>
+        <p id="quoteText">Loading...</p>
+      </section>
 
-        
-        <u>This is underlined text</u>
+      <section class="todo">
+        <h3>📝 To-Do List</h3>
+        <input type="text" id="todoInput" placeholder="Enter task" />
+        <button onclick="addTodo()">Add</button>
+        <ul id="todoList"></ul>
+      </section>
 
-        <br>
-        <hr>
+      <section class="history">
+        <h3>🔍 Search History</h3>
+        <ul id="historyList"></ul>
+      </section>
+    </div>
 
-        <img src="https://media.tenor.com/IJwsfw7ToiQAAAAM/wait-what.gif" alt="this is an image">
-    </body>
+    <!-- AI Chatbot Section -->
+    <section class="chatbot">
+      <h3>🤖 AI Chatbot</h3>
+      <div id="chatbotContainer">
+        <input type="text" id="chatInput" placeholder="Ask me anything..." />
+        <button onclick="startChat()">Chat</button>
+        <div id="chatOutput"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>India</p>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Advertising</a>
+      <a href="#">Business</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Settings</a>
+    </div>
+  </footer>
+
+  <!-- Background Music Player -->
+  <audio id="bgMusic" controls autoplay loop>
+    <source src="your-background-music.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
 </html>
