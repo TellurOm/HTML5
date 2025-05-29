@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar Toggle</title>
+  <style>
+    body { font-family: Arial; margin: 0; padding: 0; }
+    .navbar { background: #333; color: white; padding: 10px; }
+    .links { display: none; background: #444; padding: 10px; }
+    .links a { display: block; color: white; margin: 5px 0; text-decoration: none; }
+    .toggle-btn { background: #555; color: white; padding: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <span class="toggle-btn" onclick="toggleNavbar()">☰ Menu</span>
+    <div class="links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleNavbar() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .show {
+        display: block !important;
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+
+</body>
+</html>

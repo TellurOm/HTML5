@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reviews Carousel</title>
+  <style>
+    body { font-family: Arial; padding: 20px; text-align: center; }
+    .review-box { border: 1px solid #ccc; padding: 20px; margin: 10px auto; width: 300px; }
+    button { margin: 10px; padding: 10px 20px; }
+  </style>
+</head>
+<body>
+
+  <h2>Reviews Carousel</h2>
+  <div class="review-box" id="review"></div>
+  <button onclick="prevReview()">Prev</button>
+  <button onclick="nextReview()">Next</button>
+
+  <script>
+    const reviews = [
+      "Excellent product! Highly recommend.",
+      "Good value for money.",
+      "Average experience, could be better.",
+      "Loved it! Will buy again."
+    ];
+
+    let index = 0;
+    const reviewBox = document.getElementById("review");
+
+    function showReview() {
+      reviewBox.textContent = reviews[index];
+    }
+
+    function nextReview() {
+      index = (index + 1) % reviews.length;
+      showReview();
+    }
+
+    function prevReview() {
+      index = (index - 1 + reviews.length) % reviews.length;
+      showReview();
+    }
+
+    showReview(); 
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Menu</title>
+  <style>
+    body { font-family: Arial; margin: 0; }
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background: #333;
+      color: white;
+      position: fixed;
+      left: -250px;
+      top: 0;
+      transition: left 0.3s ease;
+      padding: 20px;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background: #444;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</div>
+  <div class="sidebar" id="sidebar">
+    <h2>Sidebar</h2>
+    <p>Links and content</p>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
